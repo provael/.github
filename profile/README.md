@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/provael/.github/main/profile/provael_icon_512.png" alt="Provael" width="120" height="120">
+</p>
+
 <h1 align="center">Provael</h1>
 <p align="center"><strong>Prove it. Prevail.</strong></p>
 <p align="center">The open-source red-team &amp; assurance layer for <strong>physical AI</strong>.</p>
