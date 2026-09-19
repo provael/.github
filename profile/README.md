@@ -4,39 +4,39 @@
 
 <h1 align="center">Provael</h1>
 <p align="center"><strong>Prove it. Prevail.</strong></p>
-<p align="center">The open-source red-team &amp; assurance layer for <strong>physical AI</strong>.</p>
+<p align="center">Red-team open Vision-Language-Action (VLA) robot policies in simulation, and get an attack-success rate beside the control it is read against.</p>
 
 ---
 
-Robots and humanoids increasingly run on **VLA (vision-language-action) models** — a single
-neural network that turns a camera image and an instruction into motor commands. That "robot
-brain" can be attacked much like an LLM is jailbroken, except the failure now moves a real
-arm. Almost no one is security-testing this layer yet.
+A **VLA policy** turns a camera image and an instruction into motor commands. It can be pushed
+off course the way a language model is jailbroken, except the failure moves an arm. Provael is the
+open-source tool that measures that, honestly: an **attack-success rate with its 95 % interval, a
+benign control, a competence control, and an evidence label** that says whether a real policy or
+the CPU fixture produced it — then the artifacts a review needs (SARIF, OSCAL, a CycloneDX ML-BOM,
+a test report, a signed attestation).
 
-**Provael attacks VLA policies in simulation, measures an Attack Success Rate (ASR), and is
-building toward proving a policy is safe** — against the standards regulators and insurers
-are beginning to require (ISO 10218:2025, the EU AI Act / Machinery Regulation).
+**What it is not.** Simulation only — no physical robot, no real-world-harm payload. Evidence, not
+certification. A measurement of *this* checkpoint under *this* protocol, never a safety proof.
 
 ### Start here
 
-➡️ **[`provael`](https://github.com/provael/provael)** — the red-team harness. Model-agnostic,
-CPU-first, Apache-2.0. Perturbs the instructions and observations a VLA receives and reports
-how often it's driven into an unsafe state.
+➡️ **[`provael`](https://github.com/provael/provael)** — the CLI. CPU-first, Apache-2.0, one
+command to a deterministic run; a GPU and the `[lerobot]` extra for a real policy.
 
-> **One honest early result:** a simple instruction reframing diverted a real *SmolVLA ×
-> LIBERO* policy **100%** of the time on a pick-and-place task — while the benign baseline
-> stayed at **0%**. Visual/scene-text attacks didn't move it (0%). Early, reproducible, and
-> we say exactly what does and doesn't work.
+➡️ **[The measured result](https://www.provael.com/results/)** — one real policy, ten tasks, every
+rate with its control and interval, the nulls published beside the finding, and the corrections
+register that goes with them. Read it there rather than here: this page holds no numbers, because a
+number typed into an unguarded page is how a stale claim survives.
 
-### The direction
+➡️ **[Documentation](https://docs.provael.com)** · **[The Embodied AI Security Top 10](https://docs.provael.com/latest/top10/)**
+(an independent community list, CC-BY-SA 4.0 — not a Provael product, not affiliated with the
+OWASP® Foundation or MITRE®).
 
-The robot security lifecycle, in the open: **attack** (red-team VLA policies) → **prove**
-(assurance reports mapped to the standards) → **guard** (runtime checks). Built in public —
-wins and dead ends.
+### How it is run
 
-### Follow along
+One maintainer, [Sattyam Jain](https://github.com/sattyamjjain), in the open — wins and dead ends
+both. Reproductions of the published result, whichever way they come out, are the contribution the
+project is short of: the [reproduction request](https://docs.provael.com/latest/reproduction-request/)
+has everything needed to attempt one.
 
-🔗 Repo: [github.com/provael/provael](https://github.com/provael/provael) · 🐦 X:
-[@getprovael](https://x.com/getprovael) · 🌐 provael.com *(coming soon)* · ✉️ getprovael@gmail.com
-
-<sub>Founded by <a href="https://github.com/sattyamjjain">Sattyam Jain</a> — GenAI architect, agentic-AI security (agent-audit-kit, agent-airlock).</sub>
+🔗 [provael.com](https://www.provael.com) · ✉️ hello@provael.com · 🐦 [@getprovael](https://x.com/getprovael)
